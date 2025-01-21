@@ -1,17 +1,13 @@
 #Set_Directory
 #Copy the directory of the files you downloaded
-cd "C:\Users\・・・・\uploads"
+cd ""
 
 #Replace_names
-#The original name before _Esp00: 199923-3-12423749-task-y8nz-42625342-5
-#Replaced with MD04
 
-Get-ChildItem -File | ForEach-Object { Rename-Item $_.FullName -NewName ($_.Name -replace "199923-3-12423749-task-y8nz-42625342-5", "MD04") }
+Get-ChildItem -File | ForEach-Object { Rename-Item $_.FullName -NewName ($_.Name -replace "199923-3-12275-task", "01") }
 
-#The original name before _Eng00: 199923-3-12275459-task-y8nz-42479803-3
-#Replaced with MD04
 
-Get-ChildItem -File | ForEach-Object { Rename-Item $_.FullName -NewName ($_.Name -replace "199923-3-12423749-task-y8nz-42625342-3", "MD04") }
+Get-ChildItem -File | ForEach-Object { Rename-Item $_.FullName -NewName ($_.Name -replace "199923-3-12275-task", "01") }
 
 Get-ChildItem -File | ForEach-Object { 
     $newName = $_.Name -replace "-\d+(-\d+)*(?=\.\w+$)", ""
